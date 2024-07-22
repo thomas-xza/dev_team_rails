@@ -7,12 +7,12 @@
     
   <% @projects.each do |project| %>
     <li>
-     <%= project.title %>
+      <a href="/projects/<%= project.id %>">
+        <%= project.title %>
+      </a>
     </li>
     <% end %>
     
     </ul>
   </p>
 
-
-<p>Find me in app/views/projects/index.html.erb</p>
