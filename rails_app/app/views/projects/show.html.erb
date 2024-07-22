@@ -9,17 +9,16 @@
 <%= form_with model: [ @project, @project.comments.build ] do |form| %>
 
   <p>
-    <%= form.label :creator %><br>
+    <%= form.label :creator %> 
     <%= form.text_field :creator %>
   </p>
   
   <p>
-    <%= form.label :tag %><br>
+    <%= form.label :tag %>
     <%= form.text_field :tag %>
   </p>
   
   <p>
-    <%= form.label :body %><br>
     <%= form.text_area :body %>
   </p>
   
@@ -32,8 +31,8 @@
 
 <% @project.comments.each do |comment| %>
   <p>
-    <strong><%= comment.creator %></strong>
+    <strong><%= comment.creator %></strong> <em><%= comment.created_at %> </em>
     <br>
-    <%= comment.body %>
+    <%= comment.body %> <strong>#<%= comment.tag %></strong>
   </p>
 <% end %>
