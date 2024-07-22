@@ -5,7 +5,7 @@
 
 2. Open Github Codespace
 
-3. `sudo apt-get update && sudo apt-get install ruby rails`
+3. `sudo apt-get update && sudo apt-get install ruby`
 
 4. `bundle install --gemfile /workspaces/dev_team_rails/rails_app/Gemfile`
 

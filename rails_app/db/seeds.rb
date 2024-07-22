@@ -42,3 +42,5 @@ Comment.find_or_create_by!(project_id: 1, body: "Will have a look at previous pr
 
 Comment.find_or_create_by!(project_id: 1, body: "This is an MVP, please don't go overboard with features, path to profitability needs to be quick in this context.", creator: "Joseph (investor)", tag: "core-features")
 
+Status.find_or_create_by!(project_id: 1, status: "prototyping")
+
