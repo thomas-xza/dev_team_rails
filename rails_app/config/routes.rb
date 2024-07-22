@@ -8,8 +8,10 @@ Rails.application.routes.draw do
 
   root "projects#index"
 
-  get "/projects", to: "projects#index"
+  resources :projects do
 
-  get "/projects/:id", to: "projects#show"
+    resources :comments
+
+  end
 
 end

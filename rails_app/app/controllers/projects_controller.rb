@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   end
 
   
-  def show
+  def view
     
     @project = Project.find(params[:id])
     
