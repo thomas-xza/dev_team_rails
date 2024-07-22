@@ -7,7 +7,7 @@
 
 3. `sudo apt-get update && sudo apt-get install ruby`
 
-4. `bundle install --gemfile /workspaces/dev_team_rails/rails_app/Gemfile`
+4. `bundle install --gemfile /workspaces/dev_team_rails/rails_app/Gemfile` (you may need to change `dev_team_rails` if you changed the repo name)
 
 5. `cd rails_app`
 
