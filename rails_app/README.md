@@ -38,6 +38,6 @@ New projects are currently having to be initialised manually, to save time:
 
 1. `bin/rails console`
 
-2. `Project.new(title: "Sample project", creator: "Jean", status: "TODO: Remove this column from the Project table").save`
+2. `Project.new(title: "Sample project", creator: "Jean").save`
 
 3. `Status.new(status: "initialisation").save`
