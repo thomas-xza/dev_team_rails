@@ -8,9 +8,9 @@
 #     MovieGenre.find_or_create_by!(title: genre_title)
 #   end
 
-Project.find_or_create_by!(title: "Project management website", creator: "Jillary", status: "TODO: delete this column from Project table")
+Project.find_or_create_by!(title: "Project management website", creator: "Jillary")
 
-Project.find_or_create_by!(title: "Empty project", creator: "Jean", status: "TODO: delete this column from Project table")
+Project.find_or_create_by!(title: "Empty project", creator: "Jean")
 
 Status.find_or_create_by!(project_id: 1, status: "initialisation")
 
@@ -21,9 +21,9 @@ Status.find_or_create_by!(project_id: 2, status: "initialisation")
 
 
 
-Comment.new(project_id: 1, body: "What is the business use case for this project? E.g. MVP for startup, replacement for legacy system for giant company with large userbase, etc?", creator: "Jillary (Project Manager)", tag: "use-case")"
+Comment.new(project_id: 1, body: "What is the business use case for this project? E.g. MVP for startup, replacement for legacy system for giant company with large userbase, etc?", creator: "Jillary (Project Manager)", tag: "use-case")
 
-Comment.new(project_id: 1, body: "Have any members of staff built something similar to this before?", creator: "Jillary (Project Manager), tag: "experience")
+Comment.new(project_id: 1, body: "Have any members of staff built something similar to this before?", creator: "Jillary (Project Manager)", tag: "experience")
 
 Comment.new(project_id: 1, body: "What technologies is everyone already familiar with, that they believe to be robust, and why do they believe this?", creator: "Jillary (Project Manager)", tag: "technology")
 

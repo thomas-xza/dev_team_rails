@@ -7,15 +7,13 @@
 
 3. `sudo apt-get update && sudo apt-get install ruby rails`
 
-##  4. `gem install rails`
+4. `bundle install --gemfile /workspaces/dev_team_rails/rails_app/Gemfile`
 
-##  5. `bundle install --gemfile /workspaces/dev_team_rails/rails_app/Gemfile`
+5. `cd rails_app`
 
-6. `cd rails_app`
+6. `bin/rails db:setup`
 
 7. `bin/rails server`
-
-8. `bin/rails db:migrate`
 
 *Note: as of 2024-07-22, Github Codespaces is running Ubuntu 20.04 LTS, Ruby 3.2.4*
 
