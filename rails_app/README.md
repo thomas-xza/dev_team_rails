@@ -1,24 +1,27 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Quickstart
 
-Things you may want to cover:
+1. Clone repo
 
-* Ruby version
+2. Open Github Codespace
 
-* System dependencies
+3. `apt-get install ruby`
 
-* Configuration
+4. `bin/rails server`
 
-* Database creation
+*Note: as of 2024-07-22, Github Codespaces is running Ubuntu 20.04 LTS, Ruby 3.2.4*
 
-* Database initialization
 
-* How to run the test suite
+###  Details on this project
 
-* Services (job queues, cache servers, search engines, etc.)
+3 tables:
 
-* Deployment instructions
+- Project
 
-* ...
+- Comments (associated to project)
+
+- Statuses (associated to project)
+
+Conversation history is built by selecting and merging all data
+associated with project, sorting chronologically, then tweaking output
+depending on type.
