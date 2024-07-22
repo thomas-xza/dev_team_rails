@@ -5,6 +5,7 @@ class CreateComments < ActiveRecord::Migration[7.1]
       t.integer :parent_project
       t.string :creator
       t.string :tag
+      t.references :project, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   
   def create
     
-    @project = Project.find(params[:id])
+    @project = Project.find(params[:project_id])
     
     @comment = @project.comments.create(comment_params)
     
@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
   
   def comment_params
     
-    params.require(:comment).permit(:creator, :body)
+    params.require(:comment).permit(:creator, :body, :tag)
     
   end
   

@@ -5,9 +5,11 @@ one:
   parent_project: 1
   creator: MyString
   tag: MyString
+  project: one
 
 two:
   body: MyText
   parent_project: 1
   creator: MyString
   tag: MyString
+  project: two
