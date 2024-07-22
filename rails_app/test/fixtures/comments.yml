@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  parent_project: 1
+  creator: MyString
+  tag: MyString
+
+two:
+  body: MyText
+  parent_project: 1
+  creator: MyString
+  tag: MyString
