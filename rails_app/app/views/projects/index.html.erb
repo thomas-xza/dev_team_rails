@@ -1,12 +1,16 @@
-<h1>Projects#index</h1>
+<h1>Projects</h1>
 
 <p>
   Please select from the following active projects:
 
   <ul>
-
-    <!--  ERB HERE TO GENERATE MENU -->
-
+    
+  <% @projects.each do |project| %>
+    <li>
+     <%= project.title %>
+    </li>
+    <% end %>
+    
     </ul>
   </p>
 
