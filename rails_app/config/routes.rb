@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :projects do
 
-    resources :comments
+    resources :comments, :statuses
 
   end
 
