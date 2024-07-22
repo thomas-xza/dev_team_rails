@@ -40,4 +40,4 @@ New projects are currently having to be initialised manually, to save time:
 
 2. `Project.new(title: "Sample project", creator: "Jean").save`
 
-3. `Status.new(status: "initialisation").save`
+3. `Status.new(status: "initialisation", project_id: 3).save`
