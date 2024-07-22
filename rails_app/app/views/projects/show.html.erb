@@ -1,16 +1,56 @@
 
 <h1><%= @project.title %></h1>
 
+<%=
+
+  status_data = @project.statuses.as_json.
+  map { |data| data.to_h }.
+  map { |data| data.merge(type: "status") }
+    
+  comment_data = @project.comments.as_json.
+  map { |data| data.to_h }.
+  map { |data| data.merge(type: "comment") }
+      
+  all_data = status_data + comment_data
+
+  sorted_all_data = all_data.sort_by { |data| data["created_at"] }
+
+  debug sorted_all_data
+      
+ %>
+
 <p>Project creator: <%= @project.creator %></p>
 
-<p>Current project status: <%= @project.status %></p>
+<p>Current project status: <%= status_data[-1]["status"] %><br>
+  <em>As of <%= status_data[-1]["created_at"] %></em>
+</p>
+
+
+
+<h3>Conversation history</h3>
+
+<%= sorted_all_data.each do |data| %>
+
+<%=   if data.type == "status"  then%>
+  <p>
+    <%= status.status %> <em><%= status.created_at %> </em>
+  </p>
+
+  <%= else %>
+
+  <p>
+    <strong><%= comment.creator %></strong> <em><%= comment.created_at %> </em>
+    <br>
+    <%= comment.body %> <strong>#<%= comment.tag %></strong>
+  </p>
+  
+
+<% end %>
+
 
 
 <h3>Status log</h3>
 <% @project.statuses.each do |status| %>
-  <p>
-    <%= status.status %> <em><%= status.created_at %> </em>
-  </p>
 <% end %>
 
 <%= form_with model: [ @project, @project.statuses.build ] do |form| %>
@@ -49,9 +89,4 @@
 
 
 <% @project.comments.each do |comment| %>
-  <p>
-    <strong><%= comment.creator %></strong> <em><%= comment.created_at %> </em>
-    <br>
-    <%= comment.body %> <strong>#<%= comment.tag %></strong>
-  </p>
 <% end %>
