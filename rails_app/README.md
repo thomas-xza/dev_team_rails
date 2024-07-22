@@ -1,15 +1,25 @@
 
 ### Quickstart
 
-1. Clone repo
+1. Clone repo, push to Github
 
 2. Open Github Codespace
 
-3. `apt-get install ruby`
+3. `sudo apt-get update && sudo apt-get install ruby rails`
 
-4. `bin/rails server`
+##  4. `gem install rails`
+
+##  5. `bundle install --gemfile /workspaces/dev_team_rails/rails_app/Gemfile`
+
+6. `cd rails_app`
+
+7. `bin/rails server`
+
+8. `bin/rails db:migrate`
 
 *Note: as of 2024-07-22, Github Codespaces is running Ubuntu 20.04 LTS, Ruby 3.2.4*
+
+*This app is based on Rails 7.1.3.4*
 
 
 ###  Details on this project
