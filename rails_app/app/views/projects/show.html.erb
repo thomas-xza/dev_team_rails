@@ -1,12 +1,10 @@
+
 <h1><%= @project.title %></h1>
 
 <p>Project creator: <%= @project.creator %></p>
 
 <p>Project status: <%= @project.status %></p>
 
-
-
-<h2>Add a comment:</h2>
 
 <%= form_with model: [ @project, @project.comments.build ] do |form| %>
 
@@ -34,12 +32,8 @@
 
 <% @project.comments.each do |comment| %>
   <p>
-    <strong>Commenter:</strong>
-    <%= comment.creator %>
-  </p>
-
-  <p>
-    <strong>Comment:</strong>
+    <strong><%= comment.creator %></strong>
+    <br>
     <%= comment.body %>
   </p>
 <% end %>
