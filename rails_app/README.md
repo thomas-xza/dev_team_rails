@@ -32,4 +32,4 @@ New projects are currently having to be initialised manually, to save time:
 
 2. `Project.new(title: "Sample project", creator: "Jean", status: "TODO: Remove this column from the Project table").save`
 
-3. `Status.new(status: "initialisation")`
+3. `Status.new(status: "initialisation").save`
