@@ -1,43 +1,14 @@
 
 <h1><%= @project.title %></h1>
 
-<%=
-
-  debug @sorted_all_data
-      
- %>
+<%#  debug @sorted_all_data   %>
 
 <p>Project creator: <%= @project.creator %></p>
 
-<p>Current project status: <%= @status_data[-1]["status"] %><br>
-  <em>As of <%= ~status_data[-1]["created_at"] %></em>
+<p>Current project status: <strong><%= @status_data[-1]["status"] %></strong> <br><em>...as of <%= @status_data[-1]["created_at"] %></em>
 </p>
 
 
-
-<h3>Conversation history</h3>
-
-<%=# @sorted_all_data.each do |data| %>
-
-<%=# if data[:type] === "status" %>
-  <p>
-    <%=# status.status %> <em><%= status.created_at %> </em>
-  </p>
-
-  <%=# else %>
-
-  <p>
-    <strong><%=# comment.creator %></strong> <em><%=# comment.created_at %> </em>
-    <br>
-    <%=# comment.body %> <strong>#<%=# comment.tag %></strong>
-  </p>
-  
-
-<%# end %>
-
-
-
-<h3>Status log</h3>
 <% @project.statuses.each do |status| %>
 <% end %>
 
@@ -51,7 +22,6 @@
 <% end %>
 
 
-<h3>Comments</h3>
 
 <%= form_with model: [ @project, @project.comments.build ] do |form| %>
 
@@ -76,5 +46,27 @@
 <% end %>
 
 
-<% @project.comments.each do |comment| %>
+
+<h3>Conversation history</h3>
+
+<% @sorted_all_data.each do |data| %>
+
+<% if data[:type] == "status" %>
+  <p>
+    &#x1F38F; <strong>Status updated to <%= data["status"] %></strong> <em><%= data["created_at"] %> </em>
+  </p>
+
+  <% else %>
+
+  <p>
+    &#x1F4AC; <strong><%= data["creator"] %></strong>  <em><%= data["created_at"] %> </em>
+    <br>
+    <%= data["body"] %> <strong>#<%= data["tag"] %></strong>
+  </p>
+
+  <% end %>
+
 <% end %>
+
+
+

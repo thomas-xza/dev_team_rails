@@ -22,8 +22,8 @@ class ProjectsController < ApplicationController
 
     all_data = @status_data + comment_data
 
-    @sorted_all_data = all_data.sort_by { |data| data["created_at"] }
-    
+    @sorted_all_data = all_data.sort_by{ |data| data["created_at"] }.reverse
+
   end
 
   
