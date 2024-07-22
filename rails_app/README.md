@@ -25,3 +25,11 @@
 Conversation history is built by selecting and merging all data
 associated with project, sorting chronologically, then tweaking output
 depending on type.
+
+New projects are currently having to be initialised manually, to save time:
+
+1. `bin/rails console`
+
+2. `Project.new(title: "Sample project", creator: "Jean", status: "TODO: Remove this column from the Project table").save`
+
+3. `Status.new(status: "initialisation")`
